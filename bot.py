@@ -1,6 +1,9 @@
 import telebot
 import os
 from PIL import Image
+import time
+
+
 #
 
 
@@ -95,7 +98,7 @@ def delete_folder_contents(folder_path):
 #
 # المجد للآب والابن والروح القدس الآن وكل أوان وإلى دهر الداهرين. آمين.
 
-TOKEN = '7466186236:AAHcWeiq8_ASkxbvYfaa41raGgGzHrH_7f0'
+TOKEN = '7295364618:AAGpx3nd7WoBtDHhDz7cMF5n9imPrqiEBxI'
 bot = telebot.TeleBot(TOKEN)
 
 INPUT_PHOTO_FOLDER = 'input_photo'
@@ -124,6 +127,7 @@ def handle_photo(message):
             new_file.write(downloaded_file)
 
         photo_count += 1
+
         bot.reply_to(message, f'Фото {photo_count} получено!')
 
         if photo_count == 3:
@@ -141,7 +145,8 @@ def handle_photo(message):
             delete_folder_contents(OUTPUT_PHOTO_FOLDER)
             bot.reply_to(message, 'Обработка завершена, изображения отправлены и удалены!')
     else:
-        bot.reply_to(message, 'Только 3 фото можно отправить.')
+        bot.reply_to(message, 'Вы уже отправили 3 фото. Пожалуйста, дождитесь завершения обработки перед отправкой новых фото.')
+
 
 bot.polling()
 
