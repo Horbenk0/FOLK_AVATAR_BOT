@@ -97,7 +97,7 @@ def delete_folder_contents(folder_path):
 #
 # المجد للآب والابن والروح القدس الآن وكل أوان وإلى دهر الداهرين. آمين.
 
-TOKEN = '7295364618:AAGpx3nd7WoBtDHhDz7cMF5n9imPrqiEBxI'
+TOKEN = '7466186236:AAHcWeiq8_ASkxbvYfaa41raGgGzHrH_7f0'
 bot = telebot.TeleBot(TOKEN)
 
 INPUT_PHOTO_FOLDER = 'input_photo'
