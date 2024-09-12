@@ -1,0 +1,1 @@
+# FOLK_AVATAR_BOT
